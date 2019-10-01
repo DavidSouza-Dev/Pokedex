@@ -37,7 +37,7 @@ $.ajax({
     success: (resposta) => {
         console.log(resposta);
 
-        $(".linha").append(`<div class="id">ID: ${("000"+ resposta.id).slice(-3)} </div><div>${resposta.species.name.toUpperCase()}</div><p>`);
+        $(".linha").append(`<div class="id">ID: ${("000"+ resposta.id).slice(-3)} </div><div>${resposta.species.name.toUpperCase()}</div>`);
         
        /*$(".lista").append(`<img class="pikachu" "height="116" width="116"src=${resposta.sprites.front_default}>`);   
           
