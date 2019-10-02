@@ -1,0 +1,90 @@
+body{
+    background-color: black!important;
+}
+
+
+.titulo{
+    font-size: 50px;
+    color: rgb(253, 228, 0);
+    text-shadow: rgb(0, 102, 255) 1px 0px 2px;
+     -webkit-text-stroke-width: 1.0px;
+    -webkit-text-stroke-color:  rgb(0, 102, 255);
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.conteudo{
+    padding:  0 5px 5px 5px;
+    border-radius: 3px;
+    width: 465px;
+    height: 355px;
+    background-color: whitesmoke;
+    margin: 20px auto 0 auto;
+
+}
+.conteudo h3{
+    -webkit-text-stroke-width: .4px;
+    -webkit-text-stroke-color: black;
+    color: whitesmoke;
+    border: 3px solid black;
+    
+    margin: 0 auto 10px auto;
+    text-align: center;
+    background-color: #223abd;
+}
+.lista{
+    border-radius: 7px ;
+   border: 3px solid black;
+    width:450px;
+    height: 300px;
+    margin:auto;
+    padding:0 ;
+    background-color: whitesmoke;
+    display:flex;
+    /* flex-direction: column; */
+    text-decoration: none;
+    background-color: #ff2c2c;
+    overflow-y: auto;
+    scrollbar-color: #ff2c2c rgb(219, 108, 108);
+    scrollbar-width: thin;
+}
+
+.avatar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin:0;
+    width: 221px;
+    
+
+}
+.linha{
+    
+    list-style-type: none;
+/*     align-self: flex-end;*/    
+
+    line-height: 40px;
+    width: 55%;
+     
+           
+}
+.linha li{
+    
+    border-left:  3px solid black;
+    display: flex;
+    justify-content: flex-end;
+}
+.linha li span{padding-left: 5px;
+    border-left: 5px solid salmon;
+    background-color: whitesmoke;
+}
+.linha li a{
+    padding-left: 10px;
+    background-color: whitesmoke;
+    color: black;
+}
+.linha li a:hover{
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: black;
+}

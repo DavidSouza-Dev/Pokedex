@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -16,52 +17,16 @@
 </head>
 <body>
     <h1 class="titulo">Pokédex</h1>
-
-    <div class="lista" style="border:1px solid blue;">
-        <div class="linha" style="border:1px solid red;">
-
+    <div class="conteudo">
+        <h3>Search Pokemon</h3>
+        <div class="lista" >
+            <div class="avatar"><h1>nome</h1><img src="" alt=""><span></span></div>
+                <div class="linha" >
+    
+            </div>
         </div>
     </div>
+   
 </body>
 </html>
 <script src="/rederiza-lista.js"></script>
-<style>
-        body{
-            background-color: rgba(255, 0, 0, 0.89)
-        }
-        .titulo{
-            font-size: 50px;
-            color: rgb(253, 228, 0);
-            text-shadow: rgb(0, 102, 255) 1px 0px 2px;
-             -webkit-text-stroke-width: 1.0px;
-            -webkit-text-stroke-color:  rgb(0, 102, 255);
-            margin-top: 10px;
-            text-align: center;
-            font-weight: bolder;
-        }
-        
-        .lista{
-            margin:20px 20px 0 20px;
-            padding:20px;
-            background-color: whitesmoke;
-            display:flex;
-            flex-direction: column;
-            border-radius: 25px ;
-            border-bottom: 1px solid lightgray  ;
-            
-        }
-        .linha{
-            display: flex;
-            justify-content: space-between;
-                   
-        }
-
-        
-        .status{
-            margin: 0 20px 20px 20px;
-            padding:0 20px 0 20px;
-            background-color: whitesmoke;
-            height: 290px;
-            border-radius: 0 0 25px 25px;
-        }
-        </style>
