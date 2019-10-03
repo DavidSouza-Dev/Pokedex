@@ -20,8 +20,13 @@
     <div class="conteudo">
         <h3>Search Pokemon</h3>
         <div class="lista" >
-            <div class="avatar"><h1>nome</h1><img src="" alt=""><span></span></div>
-                <div class="linha" >
+            <div class="avatar">
+                <div class="card">
+                    <div class="tipo"></div> 
+                </div>
+            </div>
+
+            <div class="linha" >
     
             </div>
         </div>
@@ -30,3 +35,12 @@
 </body>
 </html>
 <script src="/rederiza-lista.js"></script>
+<script>
+    
+    $(document).ready(function(){
+        $(" li").click(function(){
+
+            alert($(this).attr('id'));
+        });
+    });
+</script>
