@@ -36,11 +36,63 @@
 </html>
 <script src="/rederiza-lista.js"></script>
 <script>
-    
-     $(document).ready(function(){
-        $(" li").click(function(){
+    var id = getId();
+console.log("valor"+ id)
+    renderizaCard();
+    console.log("teste"+resp);
+    var resp = function getId(){
+        $(document).ready(function(){
+            $(" li").click(function(){
+                console.log($(this).attr('id'));
+               
+            });
+        }); 
+    }
+    function renderizaCard(){
+     $.ajax({
+        url:`https://pokeapi.co/api/v2/pokemon/1`,
+        method: 'GET',
+        dataType:'json',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        success: (resposta) => {
+            console.log(resposta);
+            var nome = resposta.name.toUpperCase();
+            var imagem = resposta.sprites.front_default;
+            var altura = resposta.height;
+            var peso = resposta.weight;
+            
 
-            console.log($(this).attr('id'));
-        });
-    }); 
+            $(".card").append(`
+            <h4>${nome}</h4>`).append(`<img class="pikachu" "height="116" width="116"src=${imagem}>`);
+
+            $(".card").append(`
+                    <div class="altura">
+                        Height:    ${altura}'
+                    </div> 
+                    <div class="peso">
+                        Weight:    ${peso} lb's
+                    </div>
+                `);
+
+
+            for (var i=0; i<resposta.types.length; i++){
+                $(".tipo").append(`
+                    <div class="nome-tipo">
+                        ${resposta.types[i].type.name.toUpperCase()}
+                    </div>
+                    `) 
+            }
+            
+        
+        
+        } 
+    });  
+
+        
+}
+
+
+
 </script>

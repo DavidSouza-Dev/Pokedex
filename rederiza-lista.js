@@ -4,10 +4,9 @@ teste();
 
 function renderizaLista(){
     for (var i=1; i<=15; i++){
-        var url = `https://pokeapi.co/api/v2/pokemon/${i}`
-        console.log(url)
+        
         $.ajax({
-            url: url,
+            url: `https://pokeapi.co/api/v2/pokemon/${i}`,
             method: 'GET',
             dataType:'json',
             headers: {
@@ -48,9 +47,9 @@ function renderizaLista(){
     }
 }
 
-function renderizaCard(){
-     /*$.ajax({
-        url:"16401_1.json",
+/* function renderizaCard(){
+     $.ajax({
+        url:`https://pokeapi.co/api/v2/pokemon/1`,
         method: 'GET',
         dataType:'json',
         headers: {
@@ -90,8 +89,8 @@ function renderizaCard(){
         } 
     });  
 
-      */  
-}
+        
+} */
 /* var teste = function teste(){
     $(document).ready(function(){
         $(" li").click(function(){
