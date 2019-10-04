@@ -13,6 +13,7 @@
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+    <link href="/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet"> <!--load all styles -->
     <title>POkédex!!!</title>
 </head>
 <body>
@@ -22,7 +23,9 @@
         <div class="lista" >
             <div class="avatar">
                 <div class="card">
+                    <img class="logo" height="200" width="200" src="/pokedex logo.jpg" alt="">
                     <div class="tipo"></div> 
+                    
                 </div>
             </div>
 
@@ -34,21 +37,82 @@
    
 </body>
 </html>
-<script src="/rederiza-lista.js"></script>
+<script src="/rederiza-lista.js">
+       
+
+</script>
+
 <script>
-    var id = getId();
-console.log("valor"+ id)
-    renderizaCard();
-    console.log("teste"+resp);
-    var resp = function getId(){
+    
+</script>
+
+<script>
+    
+        //renderizaCard();
+/*     console.log("teste"+getId());
+ */    
+    /* 
         $(document).ready(function(){
             $(" li").click(function(){
-                console.log($(this).attr('id'));
-               
-            });
-        }); 
-    }
-    function renderizaCard(){
+                $(".card").html("")
+                //$(".card").trigger('reset');
+                console.log(`${$(this).attr('value')}`);
+                var URL = `https://pokeapi.co/api/v2/pokemon/${$(this).attr('value')}`;
+                console.log(URL)
+                
+                $.ajax({
+                    url:URL,
+                    method: 'GET',
+                    dataType:'json',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    success: (resposta) => {
+                        console.log(resposta);
+                        var nome = resposta.name.toUpperCase();
+                        var imagem = resposta.sprites.front_default;
+                        var altura = resposta.height;
+                        var peso = resposta.weight;
+                        
+                        
+                        $(".card").append(`
+                        <h4>${nome}</h4>`).append(`<img class="avatar-card" "height="116" width="116"src=${imagem}>`);
+
+                        $(".card").append(`
+                                <div class="altura">
+                                    Height:    ${altura}'
+                                </div> 
+                                <div class="peso">
+                                    Weight:    ${peso} lb's
+                                </div>
+                                <div class="tipo"></div>
+                                <div class="maisinfo" value="${$(this).attr('value')}">More <i class="fas fa-angle-double-right"> </i></div>
+                            `);
+
+                        console.log (resposta.types[0])
+                        for (var i=0; i<resposta.types.length; i++){
+                            console.log (resposta.types[i].type.name.toUpperCase())
+                            $(".tipo").append(`
+                                
+                                    <div class="nome-tipo">
+                                    ${resposta.types[i].type.name.toUpperCase()}
+                                    </div>
+                                
+                                `) 
+                        }
+                        
+                    
+                    
+                    } 
+                });   //fim ajax
+            
+            
+            });//fim li
+        });//fim listener
+        */
+         
+    
+    /* function renderizaCard(){
      $.ajax({
         url:`https://pokeapi.co/api/v2/pokemon/1`,
         method: 'GET',
@@ -88,10 +152,10 @@ console.log("valor"+ id)
         
         
         } 
-    });  
+    });   
 
         
-}
+} */
 
 
 

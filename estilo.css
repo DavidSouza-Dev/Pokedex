@@ -65,7 +65,7 @@ body{
 
 }
 .card{
-    padding: 20px;
+    padding: 25px 20px 50px 20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -75,12 +75,56 @@ body{
     display: flex;
     order: 1;
 }
+
+.avatar-card{
+    animation: bounce 0.5s linear;
+}
+
+.avatar-card:hover{
+    animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.logo{
+    height: 200px;
+    width: 200px;
+    padding: auto 20px auto 20px;
+}
+
 .nome-tipo{
     margin: 5px;
     padding: 5px 8px 8px 8px;
     line-height: 8px;
     border-radius: 15px;
     background-color: lightgray;
+    text-align: center;
+    width: 90px!important;
+    order:1;
+}
+
+.maisinfo{
+    order: 1;
+    width: 124%;
+    background-color: #223abd;
+    text-align: center;
+    margin-top: 13px;
+    color: white;
 }
 
 .linha{
@@ -100,7 +144,7 @@ body{
     justify-content: flex-end;
 }
 .linha li span{padding-left: 5px;
-    border-left: 5px solid salmon;
+    border-left: 5px solid rgb(219, 108, 108);
     background-color: whitesmoke;
 }
 .linha li a{
