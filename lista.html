@@ -19,7 +19,9 @@
 <body>
     <h1 class="titulo">Pokédex</h1>
     <div class="conteudo">
-        <h3>Search Pokemon</h3>
+        <h3>Search Pokemon
+            <i class="fas fa-search"></i>
+        </h3>
         <div class="lista" >
             <div class="avatar">
                 <div class="card">
@@ -44,14 +46,28 @@
 </script>
 
 <script>
-    $(document).ready(function(){
-    $('.maisinfo').click(function(){ 
-        console.log("fui clicado");
-       // $(".avatar").html("")
-       // $(".card").html("")
-    });  
+   $(document).ready(function(){
+        $('span').hover(function(){ 
+            
+            $(this).css({"background-color":"lightgray"})
+            $(this).siblings(".pokemon").css({"background-color":"lightgray","transition":"all 0.1s" })   
+        }, function(){
+            $(this).css({"background-color":"whitesmoke","transition":"all  0.1s" })
+            $(this).siblings(".pokemon").css({"background-color":"whitesmoke","transition":"all  0.1s" }) 
+        });
+    });
 
-});
+    $(document).ready(function(){
+        $('.pokemon').hover(function(){ 
+            
+            $(this).css({"background-color":"lightgray","transition":"all 0.1s" })
+            $(this).siblings("span").css({"background-color":"lightgray","transition":"all 0.1s" })   
+        }, function(){
+            $(this).css({"background-color":"whitesmoke","transition":"all 0.1s" })
+            $(this).siblings("span").css({"background-color":"whitesmoke","transition":"all 0.1s" }) 
+        });
+    });
+
 </script>
 
 <script>

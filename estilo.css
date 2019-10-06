@@ -9,7 +9,7 @@ body{
     text-shadow: rgb(0, 102, 255) 1px 0px 2px;
      -webkit-text-stroke-width: 1.0px;
     -webkit-text-stroke-color:  rgb(0, 102, 255);
-    margin-top: 10px;
+    margin-top: 50px;
     text-align: center;
     font-weight: bolder;
 }
@@ -24,14 +24,23 @@ body{
 
 }
 .conteudo h3{
+    position:relative;
     -webkit-text-stroke-width: .4px;
     -webkit-text-stroke-color: black;
-    color: whitesmoke;
+    color: white;
     border: 3px solid black;
     
     margin: 0 auto 10px auto;
     text-align: center;
-    background-color: #223abd;
+    background-image: linear-gradient(to bottom, rgb(2, 83, 206), rgb(26, 113, 225), rgb(2, 83, 206));
+}
+
+.conteudo h3 i{
+    
+    opacity: 0.8;
+    position: absolute;
+    right: 16px;
+    top: 3px;
 }
 .lista{
     border-radius: 7px ;
@@ -85,7 +94,7 @@ body{
     order: 1;
 }
 
-.avatar-card{
+.avatar-card{cursor: pointer;
     margin-top: -3px;
     height: 96px!important;
     width:96px!important;
@@ -133,16 +142,23 @@ body{
 
 .maisinfo{
     position: absolute;
-    
+    cursor: pointer;
     bottom: 0;
     width: 220.5px;
     line-height: 37px;
     order: 1;
-    background-color: #223abd;
+    background-image: linear-gradient(to bottom, rgb(2, 83, 206), rgb(26, 113, 225), rgb(2, 83, 206));
     text-align: center;
     color: white;
     margin-top: 20px;
     transition: all 0.5s;
+}
+
+.maisinfo:active{
+    transition: all 0s;
+    color: black;
+    background-image: linear-gradient(to bottom, rgb(164, 177, 200), rgb(180, 200, 227), rgb(164, 177, 200));
+   
 }
 
 .linha{
@@ -156,12 +172,17 @@ body{
            
 }
 .linha li{
+    cursor: pointer;
     width:247px;
     background-color: #ff2c2c; 
     border-left:  3px solid black;
     display: flex;
     justify-content: flex-end;
 }
+
+
+
+
 .linha li span{padding-left: 5px;
     border-left: 5px solid rgb(219, 108, 108);
     background-color: whitesmoke;
