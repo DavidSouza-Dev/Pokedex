@@ -23,10 +23,11 @@
         <div class="lista" >
             <div class="avatar">
                 <div class="card">
-                    <img class="logo" height="200" width="200" src="/pokedex logo.jpg" alt="">
+                    <img class="logo" height="200" width="200" src="/pokedex-logo.jpg" alt="">
                     <div class="tipo"></div> 
                     
                 </div>
+               <!--  <div class="maisinfo">More <i class="fas fa-angle-double-right"> </i></div> -->
             </div>
 
             <div class="linha" >
@@ -43,7 +44,14 @@
 </script>
 
 <script>
-    
+    $(document).ready(function(){
+    $('.maisinfo').click(function(){ 
+        console.log("fui clicado");
+       // $(".avatar").html("")
+       // $(".card").html("")
+    });  
+
+});
 </script>
 
 <script>
