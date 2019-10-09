@@ -19,7 +19,8 @@
 <body>
     <h1 class="titulo">Pokédex</h1>
     <div class="conteudo">
-        <h3>Search Pokemon
+        <input type="text" name="filtro" id="filtar-poke" placeholder="           Type your Pokemon">
+        <h3>Search Pokemon 
             <i class="fas fa-search"></i>
         </h3>
         <div class="lista" >
@@ -45,3 +46,19 @@
 
 </script>
 
+<script>
+     $(document).ready(function(){
+        $('#filtar-poke').on("change paste keyup",function(){ 
+
+            let nome = $(".pokemon").val()
+             let expressao = new RegExp($(this).text(), "i")
+            if (expressao.test(nome)){
+                $(".pokemon").parents("li").css({"display":"none"})
+                $(".pokemon").sibligns("span").css({"display":"none"})
+                $(".pokemon").css({"display":"none"})
+            }else{
+                $(".pokemon").parent("li").css({"display":"block"})  
+            } 
+        });
+    });
+</script>

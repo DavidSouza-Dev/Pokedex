@@ -14,6 +14,7 @@ body{
     font-weight: bolder;
 }
 .conteudo{
+    position: relative;
     background-image: url(/pokedex-fundo.png);
     padding:  2px 5px 5px 5px;
     border-radius: 3px;
@@ -22,6 +23,17 @@ body{
     background-color: whitesmoke;
     margin: 20px auto 0 auto;
 
+}
+.conteudo input{
+    display:block;
+    position: absolute;
+    top: 1.84%;
+    z-index: 1;
+    left: 26%;
+    width:250px;
+    background-color: whitesmoke;
+    border:1px solid gray;
+    
 }
 .conteudo h3{
     position:relative;
