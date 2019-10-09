@@ -49,16 +49,21 @@
 <script>
      $(document).ready(function(){
         $('#filtar-poke').on("change paste keyup",function(){ 
+            console.log(`valor ${$(".linha").children().length}`) //retorna 10
+            //fazer um for e depois um seletor
 
             let nome = $(".pokemon").val()
-             let expressao = new RegExp($(this).text(), "i")
-            if (expressao.test(nome)){
-                $(".pokemon").parents("li").css({"display":"none"})
-                $(".pokemon").sibligns("span").css({"display":"none"})
-                $(".pokemon").css({"display":"none"})
+            let idNome =  $(".pokemon").parents("li").attr("value")
+            
+              let expressao = new RegExp($(this).text(), "i")
+            /* if (expressao.test(nome)){
+                $("li .pokemon").css({"display":"none"})
+                $("span").css({"display":"none"})
+                /* $(".pokemon").sibligns("span").css({"display":"none"})
+                $(".pokemon").css({"display":"none"}) 
             }else{
                 $(".pokemon").parent("li").css({"display":"block"})  
-            } 
+            }   */
         });
     });
 </script>
