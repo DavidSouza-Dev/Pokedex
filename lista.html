@@ -49,21 +49,33 @@
 <script>
      $(document).ready(function(){
         $('#filtar-poke').on("change paste keyup",function(){ 
-            console.log(`valor ${$(".linha").children().length}`) //retorna 10
-            //fazer um for e depois um seletor
-
-            let nome = $(".pokemon").val()
-            let idNome =  $(".pokemon").parents("li").attr("value")
             
-              let expressao = new RegExp($(this).text(), "i")
-            /* if (expressao.test(nome)){
-                $("li .pokemon").css({"display":"none"})
-                $("span").css({"display":"none"})
-                /* $(".pokemon").sibligns("span").css({"display":"none"})
-                $(".pokemon").css({"display":"none"}) 
-            }else{
-                $(".pokemon").parent("li").css({"display":"block"})  
-            }   */
+                var value = $(this).val();
+                var total = $(".linha").children().length
+
+            if (this.value.length > 0) {
+
+                var lista = $(".linha").children("li");
+                //console.log(lista[1])
+                var regex = new RegExp(value, "i");
+                for (let i = 0; i <total; i++) {
+                        
+                    if(!regex.test(lista[i].getAttribute("name"))){
+                        //console.log(lista[i].getAttribute("name"))
+                        lista[i].classList.add("invisivel")
+                    } else {
+                        
+                            lista[i].classList.remove("invisivel")
+                        
+                    }   
+                } 
+            } else {
+            
+                for (let i = 0; i < total; i++) {
+                    lista[i].classList.remove("invisivel")
+                }
+            }
+
         });
     });
 </script>

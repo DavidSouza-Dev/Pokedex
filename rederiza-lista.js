@@ -22,7 +22,7 @@ function renderizaLista(){
                 var nome = resposta.species.name.toUpperCase();
                 var avatar = resposta.sprites.front_default;
                 $(".linha").append(`
-                    <li id="${id}" value="${resposta.id}">
+                    <li id="${id}" value="${resposta.id}" name="${nome}">
                         <span>ID: ${id}</span>
                         <a class="pokemon" href="#"> ${nome}    
                             <img class="minuatura" "height="40" width="40"src=${avatar}>
